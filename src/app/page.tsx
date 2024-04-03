@@ -38,9 +38,27 @@ export default function HomePage() {
       </div>
       <div>
         <span className="flex justify-center">
-          Hello my name is Victor, I&apos;m a gamerz, athlete, and software engineer.
+          Hello my name is Victor, I&apos;m a gamer, athlete, and software engineer.
           Historically, I&apos;ve always been a gamer first kind of guy, and that is why I&apos;ve always wanted to build a game of my own.
         </span>
+      </div>
+      <div>
+        <span>
+          Victor Huynh
+        </span>
+      </div>
+      <div>
+        <span>
+          Gamer
+        </span>
+      </div>
+      <div>
+        <span>
+          Athlete
+        </span>
+      </div>
+      <div>
+        Software Engineer
       </div>
     </main>
   );
