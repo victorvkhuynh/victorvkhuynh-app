@@ -9,57 +9,68 @@ export default function HomePage() {
 
   return (
     <main>
-      <div className="w-full h-20 bg-emerald-800 dark:bg-slate-900 sticky top-0">
-        <nav className="flex justify-between items-center h-full">
-          <ul className="flex text-white">
+      <div className="grid grid-cols-4">
+        <div className="text-center p-2">
+          <button className="min-w-full min-h-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            <Link href="/">Victor Huynh</Link>
+          </button>
+        </div>
+        <div className="text-center p-2">
+          <button className="min-w-full min-h-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            <Link href="/about">About</Link>
+          </button>
+        </div>
+        <div className="text-center p-2">
+          <button className="min-w-full min-h-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            <Link href="/projects">Projects</Link>
+          </button>
+        </div>
+        <div className="text-center p-2">
+          <button className="min-w-full min-h-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            <Link href="/blog">Blog</Link>
+          </button>
+        </div>
+        {/* sm:h-12 md:h-16 lg:h-20 xl:h-100 2xl:h-80  */}
+        <div className="flex h-80 items-center justify-center bg-slate-300 col-span-2">
+          <div className="h-3/4 aspect-video bg-slate-700">
+            <span>info card</span>
+          </div>
+        </div>
+        <div className="flex h-100 items-center justify-center bg-slate-500 col-span-2 row-span-4">
+          <span>main visual card</span>
+        </div>
+        <div className="flex h-40 items-center justify-center bg-slate-300">
+          <div className="h-3/4 aspect-video bg-slate-700">
+            <span>sub card</span>
+          </div>
+        </div>
+        <div className="flex h-40 items-center justify-center bg-slate-300">
+          <div className="h-3/4 aspect-video bg-slate-700">
+            <span>sub card</span>
+          </div>
+        </div>
+      </div>
+      <footer className="absolute bottom-0 left-0 w-full">
+        <div className="flex flex-col items-center bg-lime-600">
+          <ul className="flex gap-x-4">
             <li>
-              <Link href="/">
-                Victor Huynh
-              </Link>
+              [Social 1]
+            </li>
+            <li>
+              [Social 2]
+            </li>
+            <li>
+              [Social 3]
+            </li>
+            <li>
+              [Social 4]
+            </li>
+            <li>
+              [Social 5]
             </li>
           </ul>
-          <ul className="flex gap-x-6 text-white">
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link href="/projects">Projects</Link>
-            </li>
-            <li>
-              <div>
-                <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>Toggle Theme</button>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <span className="flex justify-center">
-          Hello my name is Victor, I&apos;m a gamer, athlete, and software engineer.
-          Historically, I&apos;ve always been a gamer first kind of guy, and that is why I&apos;ve always wanted to build a game of my own.
-        </span>
-      </div>
-      <div>
-        <span>
-          Victor Huynh
-        </span>
-      </div>
-      <div>
-        <span>
-          Gamer
-        </span>
-      </div>
-      <div>
-        <span>
-          Athlete
-        </span>
-      </div>
-      <div>
-        Software Engineer
-      </div>
+        </div>
+      </footer>
     </main>
   );
 }
