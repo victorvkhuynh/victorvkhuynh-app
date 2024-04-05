@@ -25,7 +25,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head />
       <body className={`font-sans ${inter.variable}`}>
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <TRPCReactProvider>{children}</TRPCReactProvider>
         </ThemeProvider>
       </body>

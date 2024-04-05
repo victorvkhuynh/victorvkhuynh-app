@@ -64,13 +64,17 @@ export default function HomePage() {
         <div className="flex flex-col items-center ">
           <ul className="flex gap-x-4">
             <li>
-              <Image src={theme === 'dark' ? DiscordWhiteIcon : DiscordBlackIcon} height={24} alt="Discord Link" />
+              <Link href="https://discord.gg/3xdYjPvA2j" target="_blank" rel="noopener noreferrer">
+                <Image priority src={theme === 'dark' ? DiscordWhiteIcon : DiscordBlackIcon} height={24} alt="Discord Link" />
+              </Link>
             </li>
             <li>
-              <Image src={theme === 'dark' ? InstagramWhiteIcon : InstagramBlackIcon} height={24} alt="Instagram Link" />
+              <Link href="https://www.instagram.com/victorvkhuynh/" target="_blank" rel="noopener noreferrer">
+                <Image priority src={theme === 'dark' ? InstagramWhiteIcon : InstagramBlackIcon} height={24} alt="Instagram Link" />
+              </Link>
             </li>
             <li>
-              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>Toggle Theme</button>
+              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>Toggle {theme} Theme</button>
             </li>
           </ul>
         </div>
