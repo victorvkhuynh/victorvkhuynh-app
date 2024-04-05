@@ -38,7 +38,7 @@ export default function HomePage() {
             </button>
           </div>
           {/* sm:h-12 md:h-16 lg:h-20 xl:h-100 2xl:h-80  */}
-          <div className="left-2 flex h-64 items-center justify-center bg-slate-300 col-span-2">
+          <div className="left-2 flex h-80 items-center justify-center bg-slate-300 col-span-2">
             <div className="h-full w-full bg-slate-700">
               <span>info card</span>
             </div>
@@ -48,7 +48,7 @@ export default function HomePage() {
               <span>main visual card</span>
             </div>
           </div>
-          <div className="flex h-96 items-center justify-center bg-slate-300">
+          <div className="flex h-80 items-center justify-center bg-slate-300">
             <div className="h-full w-full bg-slate-700">
               <span>sub card</span>
             </div>
