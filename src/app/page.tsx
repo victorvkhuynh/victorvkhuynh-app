@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 "use client"
 
 import { useTheme } from "next-themes";
@@ -9,9 +10,19 @@ import DiscordBlackIcon from "src/assets/discord-black.svg";
 import InstagramBlackIcon from "src/assets/instagram-black.svg";
 import InstagramWhiteIcon from "src/assets/instagram-white.svg";
 import Image from 'next/image';
+import { useEffect, useState } from "react";
 
 export default function HomePage() {
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <main>
@@ -74,7 +85,7 @@ export default function HomePage() {
               </Link>
             </li>
             <li>
-              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>Toggle {theme} Theme</button>
+              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark') as void}>Toggle {theme} Theme</button>
             </li>
           </ul>
         </div>
