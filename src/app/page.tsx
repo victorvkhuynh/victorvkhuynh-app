@@ -9,12 +9,14 @@ import DiscordWhiteIcon from "src/assets/discord-white.svg";
 import DiscordBlackIcon from "src/assets/discord-black.svg";
 import InstagramBlackIcon from "src/assets/instagram-black.svg";
 import InstagramWhiteIcon from "src/assets/instagram-white.svg";
+import VHLogo from "public/vh_logo.png";
 import Image from 'next/image';
 import { useEffect, useState } from "react";
 
 export default function HomePage() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const [selectedButton, setSelectedButton] = useState('home');
 
   useEffect(() => {
     setMounted(true);
@@ -28,15 +30,15 @@ export default function HomePage() {
     <main>
       <div className="mx-11 mt-4 overflow-hidden">
         <div className="grid grid-cols-4 gap-4 border-spacing-2">
-          <div className="text-center">
-            <button className="min-w-full min-h-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-              <Link href="/">Victor Huynh</Link>
+          <div className="">
+            <button className="w-50 h-50 bg-transparent text-blue-700 font-semibold hover:text-white py-2 px-4 ">
+              <Image src={VHLogo} alt="Victor Huynh logo" width={50} height={50} />
             </button>
           </div>
           <div className="text-center">
-            <button className="min-w-full min-h-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-              <Link href="/about">About</Link>
-            </button>
+            {/* <button onClick={() => setSelectedButton("about")} className="min-w-full min-h-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+              <Link href="/">About</Link>
+            </button> */}
           </div>
           <div className="text-center">
             <button className="min-w-full min-h-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
@@ -49,24 +51,43 @@ export default function HomePage() {
             </button>
           </div>
           {/* sm:h-12 md:h-16 lg:h-20 xl:h-100 2xl:h-80  */}
-          <div className="left-2 flex h-80 items-center justify-center bg-slate-300 col-span-2">
-            <div className="h-full w-full bg-slate-700">
-              <span>info card</span>
+          <div className="left-2 flex h-auto items-center justify-center  col-span-2">
+            <div className="h-full w-full ">
+              <span className="flex justify-center underline underline-offset-4">About Me</span><br />
+              <p>I&apos;m Victor Huynh, a graduate of Ryerson University with a degree in Computer Science, earned in 2018. From a young age, I&apos;ve possessed a competitive spirit that has driven me towards pursuits such as e-sports, particularly in games like StarCraft 2 and League of Legends. While some may label this as mere passion or even addiction, I see it as a deep-seated dedication to my interests.<br /><br />Now, I aim to channel that same fervor towards cultivating a healthier, more athletic lifestyle, with a primary focus on nutrition and physical exercise. During periods of rest and recovery, I intend to hone my skills as a software engineer beyond my professional obligations, delving into personal projects and potential freelance opportunities.<br /><br />As I embark on this journey, I remain open to the opportunities and experiences that lie ahead, embracing the evolution of both my physical and professional pursuits.</p>
             </div>
           </div>
           <div className="flex h-full items-center justify-center bg-slate-500 col-span-2 row-span-2">
             <div className="h-full w-full bg-slate-700">
-              <span>main visual card</span>
+              <span>main visual card, image?</span>
             </div>
           </div>
-          <div className="flex h-80 items-center justify-center bg-slate-300">
-            <div className="h-full w-full bg-slate-700">
-              <span>sub card</span>
+          <div className="flex h-full items-center justify-center tracking-widest">
+            <div className="h-full w-full ">
+              <span className="flex justify-center underline underline-offset-4">Interests</span>
+              <br />
+              <ul className="text-center tracking-wider">
+                <li>Volleyball</li>
+                <li>Basketball</li>
+                <li>Kettlebell</li>
+                <li>Running</li>
+                <li>Cooking</li>
+                <li>Reading</li>
+              </ul>
             </div>
           </div>
-          <div className="flex h-full items-center justify-center bg-slate-300">
-            <div className="h-full w-full bg-slate-700">
-              <span>sub card</span>
+          <div className="flex h-full items-center justify-center tracking-widest">
+            <div className="h-full w-full ">
+              <span className="flex justify-center underline underline-offset-4">Current 2024 Goals</span>
+              <br />
+              <ul className="text-center tracking-wider">
+                <li>Finish my personal website</li>
+                <li>Grow my blog, weekly posts</li>
+                <li>Publish my first multiplayer game</li>
+                <li>Run a full marathon</li>
+                <li>Dunk a basketball</li>
+                <li>Read a book a month</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -85,7 +106,13 @@ export default function HomePage() {
               </Link>
             </li>
             <li>
-              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark') as void}>Toggle {theme} Theme</button>
+              GitHub
+            </li>
+            <li>
+              LinkedIn
+            </li>
+            <li>
+              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>Toggle Theme</button>
             </li>
           </ul>
         </div>
