@@ -9,6 +9,11 @@ import DiscordWhiteIcon from "src/assets/discord-white.svg";
 import DiscordBlackIcon from "src/assets/discord-black.svg";
 import InstagramBlackIcon from "src/assets/instagram-black.svg";
 import InstagramWhiteIcon from "src/assets/instagram-white.svg";
+import GitHubWhiteIcon from "src/assets/github-white.svg";
+import GitHubBlackIcon from "src/assets/github-black.svg";
+import LinkedInBlueIcon from "src/assets/linkedin-blue.png";
+import LinkedInWhiteIcon from "src/assets/linkedin-white.png";
+import PersonalPicture from "src/assets/placeholder-picture.png";
 import VHLogo from "public/vh_logo.png";
 import Image from 'next/image';
 import { useEffect, useState } from "react";
@@ -41,25 +46,24 @@ export default function HomePage() {
             </button> */}
           </div>
           <div className="text-center">
-            <button className="min-w-full min-h-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            <button className="min-w-full min-h-full bg-transparent hover:bg-slate-500 text-slate-800 font-semibold hover:text-white py-2 px-4 border border-slate-800 hover:border-transparent rounded">
               <Link href="/projects">Projects</Link>
             </button>
           </div>
           <div className="text-center">
-            <button className="min-w-full min-h-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            <button className="min-w-full min-h-full bg-transparent hover:bg-slate-500 text-slate-800 font-semibold hover:text-white py-2 px-4 border border-slate-800 hover:border-transparent rounded">
               <Link href="/blog">Blog</Link>
             </button>
           </div>
-          {/* sm:h-12 md:h-16 lg:h-20 xl:h-100 2xl:h-80  */}
           <div className="left-2 flex h-auto items-center justify-center  col-span-2">
             <div className="h-full w-full ">
               <span className="flex justify-center underline underline-offset-4">About Me</span><br />
               <p>I&apos;m Victor Huynh, a graduate of Ryerson University with a degree in Computer Science, earned in 2018. From a young age, I&apos;ve possessed a competitive spirit that has driven me towards pursuits such as e-sports, particularly in games like StarCraft 2 and League of Legends. While some may label this as mere passion or even addiction, I see it as a deep-seated dedication to my interests.<br /><br />Now, I aim to channel that same fervor towards cultivating a healthier, more athletic lifestyle, with a primary focus on nutrition and physical exercise. During periods of rest and recovery, I intend to hone my skills as a software engineer beyond my professional obligations, delving into personal projects and potential freelance opportunities.<br /><br />As I embark on this journey, I remain open to the opportunities and experiences that lie ahead, embracing the evolution of both my physical and professional pursuits.</p>
             </div>
           </div>
-          <div className="flex h-full items-center justify-center bg-slate-500 col-span-2 row-span-2">
-            <div className="h-full w-full bg-slate-700">
-              <span>main visual card, image?</span>
+          <div className="flex h-full items-center justify-center col-span-2 row-span-2">
+            <div className="h-full w-full relative overflow-hidden rounded-full">
+              <Image placeholder="blur" priority src={PersonalPicture} alt="Victor Huynh" layout="fill" objectFit="cover" />
             </div>
           </div>
           <div className="flex h-full items-center justify-center tracking-widest">
@@ -97,26 +101,30 @@ export default function HomePage() {
           <ul className="flex gap-x-4">
             <li>
               <Link href="https://discord.gg/3xdYjPvA2j" target="_blank" rel="noopener noreferrer">
-                <Image priority src={theme === 'dark' ? DiscordWhiteIcon : DiscordBlackIcon} height={24} alt="Discord Link" />
+                <Image src={theme === 'dark' ? DiscordWhiteIcon : DiscordBlackIcon} height={24} alt="Discord Link" />
               </Link>
             </li>
             <li>
               <Link href="https://www.instagram.com/victorvkhuynh/" target="_blank" rel="noopener noreferrer">
-                <Image priority src={theme === 'dark' ? InstagramWhiteIcon : InstagramBlackIcon} height={24} alt="Instagram Link" />
+                <Image src={theme === 'dark' ? InstagramWhiteIcon : InstagramBlackIcon} height={24} alt="Instagram Link" />
               </Link>
             </li>
             <li>
-              GitHub
+              <Link href="https://github.com/Victor-Huynh" target="_blank" rel="noopener noreferrer">
+                <Image src={theme === 'dark' ? GitHubWhiteIcon : GitHubBlackIcon} height={24} alt="GitHub Link" />
+              </Link>
             </li>
             <li>
-              LinkedIn
+              <Link href="https://www.linkedin.com/in/victor-huynh/" target="_blank" rel="noopener noreferrer">
+                <Image src={theme === 'dark' ? LinkedInWhiteIcon : LinkedInBlueIcon} height={24} alt="LinkedIn Link" />
+              </Link>
             </li>
             <li>
               <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>Toggle Theme</button>
             </li>
           </ul>
         </div>
-      </footer>
+      </footer>I
     </main>
   );
 }
