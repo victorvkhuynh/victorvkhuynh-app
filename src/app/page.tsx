@@ -6,57 +6,16 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import DiscordWhiteIcon from "src/assets/discord-white.svg";
-import DiscordBlackIcon from "src/assets/discord-black.svg";
-import InstagramBlackIcon from "src/assets/instagram-black.svg";
-import InstagramWhiteIcon from "src/assets/instagram-white.svg";
-import GitHubWhiteIcon from "src/assets/github-white.svg";
-import GitHubBlackIcon from "src/assets/github-black.svg";
-import LinkedInBlueIcon from "src/assets/linkedin-blue.png";
-import LinkedInWhiteIcon from "src/assets/linkedin-white.png";
 import PersonalPicture from "src/assets/placeholder-picture.png";
-import VHLogo from "public/vh_logo.png";
-import Switch from "@mui/material/Switch";
+import NavBar from "./_components/navbar";
+import Footer from "./_components/footer";
 
 export default function HomePage() {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <main>
       <div className="mx-11 mt-4 overflow-hidden">
         <div className="grid border-spacing-2 gap-4 md:grid-cols-4">
-          <div className="col-span-4 md:col-span-1">
-            <button className="w-50 h-50 bg-transparent px-4 py-2 font-semibold drop-shadow-lg hover:text-white">
-              <Image
-                src={VHLogo}
-                alt="Victor Huynh logo"
-                width={50}
-                height={50}
-              />
-            </button>
-          </div>
-          <div className="col-span-4 md:col-span-1"></div>
-          <div className="col-span-4 text-center drop-shadow-xl md:col-span-1">
-            <button className="border-accent hover:bg-contrast dark:border-light dark:text-light text-basic min-h-full min-w-full rounded border bg-transparent px-4 py-2 font-semibold">
-              <Link href="/projects">Projects</Link>
-            </button>
-          </div>
-          <div className="col-span-4 text-center md:col-span-1">
-            <button className="border-accent hover:bg-contrast dark:border-light dark:text-light text-basic min-h-full min-w-full rounded border bg-transparent px-4 py-2 font-semibold">
-              <Link className="" href="/blog">
-                Blog
-              </Link>
-            </button>
-          </div>
+          <NavBar />
           <div className="col-span-4 flex h-auto items-center justify-center md:col-span-2">
             <div className="h-full w-full">
               <span className="flex justify-center font-semibold underline underline-offset-4">
@@ -133,75 +92,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <br />
-      <footer className="bottom-4 left-0 w-full md:absolute">
-        <div className="flex flex-col items-center">
-          <ul className="flex gap-x-4">
-            <li>
-              <Link
-                href="https://discord.gg/3xdYjPvA2j"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={theme === "dark" ? DiscordWhiteIcon : DiscordBlackIcon}
-                  height={24}
-                  alt="Discord Link"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://www.instagram.com/victorvkhuynh/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={
-                    theme === "dark" ? InstagramWhiteIcon : InstagramBlackIcon
-                  }
-                  height={24}
-                  alt="Instagram Link"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://github.com/Victor-Huynh"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={theme === "dark" ? GitHubWhiteIcon : GitHubBlackIcon}
-                  height={24}
-                  alt="GitHub Link"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://www.linkedin.com/in/victor-huynh/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={theme === "dark" ? LinkedInWhiteIcon : LinkedInBlueIcon}
-                  height={24}
-                  alt="LinkedIn Link"
-                />
-              </Link>
-            </li>
-            <li>
-              <Switch
-                size="small"
-                defaultChecked={theme === "dark"}
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              />
-            </li>
-          </ul>
-        </div>
-      </footer>
-      <br />
+      <Footer />
     </main>
   );
 }
