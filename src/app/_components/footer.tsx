@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -33,10 +34,6 @@ export default function Footer() {
       <footer className="bottom-4 left-0 w-full md:absolute">
         <div className="placeholder">
           <br />
-          <p className="text-xs">
-            *Please excuse the latter half of my website... this is under
-            construction until I figure out what I want to add here.
-          </p>
         </div>
         <div className="flex flex-col items-center">
           <ul className="flex gap-x-4">

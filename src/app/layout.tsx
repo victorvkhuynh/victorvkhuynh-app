@@ -3,6 +3,8 @@ import "~/styles/globals.css";
 import { Inter } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import NavBar from "./_components/navbar";
+import Footer from "./_components/footer";
 import { ThemeProvider } from "next-themes";
 
 const inter = Inter({
@@ -26,7 +28,9 @@ export default function RootLayout({
       <head />
       <body className={`font-sans ${inter.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
+          <NavBar />
           <TRPCReactProvider>{children}</TRPCReactProvider>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -1,21 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { useTheme } from "next-themes";
 import PersonalPicture from "src/assets/placeholder-picture.png";
-import NavBar from "./_components/navbar";
-import Footer from "./_components/footer";
 
 export default function HomePage() {
   return (
     <main>
       <div className="mx-11 mt-4 overflow-hidden">
         <div className="grid border-spacing-2 gap-4 md:grid-cols-4">
-          <NavBar />
           <div className="col-span-4 flex h-auto items-center justify-center md:col-span-2">
             <div className="h-full w-full">
               <span className="flex justify-center font-semibold underline underline-offset-4">
@@ -47,14 +39,12 @@ export default function HomePage() {
             </div>
           </div>
           <div className="col-span-4 row-span-2 flex h-full items-center justify-center md:col-span-2">
-            <div className="relative w-full overflow-hidden rounded-full drop-shadow-2xl sm:h-96 md:h-full">
+            <div className="relative h-full w-full overflow-hidden rounded-full drop-shadow-2xl">
               <Image
                 placeholder="blur"
                 priority
                 src={PersonalPicture}
                 alt="Victor Huynh"
-                layout="fill"
-                objectFit="cover"
               />
             </div>
           </div>
@@ -92,7 +82,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }
