@@ -1,8 +1,45 @@
+import Link from "next/link";
+
 export default function Projects() {
   return (
     <>
       <main className="grid border-spacing-2 gap-4 md:grid-cols-4">
-        <h1>Projects</h1>
+        {/* Grid Headers */}
+        <div className="text-center">
+          <p className="font-semibold underline underline-offset-4">Projects</p>
+        </div>
+        <div className="col-span-2">
+          <p className="font-semibold underline underline-offset-4">
+            Description
+          </p>
+        </div>
+        <div>
+          <p className="font-semibold underline underline-offset-4">
+            Application Link
+          </p>
+        </div>
+        {/* Project 1 */}
+        <div className="text-center">
+          <p className="">Liar&apos;s Dice</p>
+        </div>
+        <div className="col-span-2">
+          <p className="">My multiplayer take on the popular deception game</p>
+        </div>
+        <div>
+          <Link className="text-contrast" href="/liars-dice">
+            Work in progress
+          </Link>
+        </div>
+        {/* Project 2 */}
+        <div className="text-center">
+          <p className="">Flatflat</p>
+        </div>
+        <div className="col-span-2">
+          <p>My multiplayer take on a DDR game, inspired by MapleStory</p>
+        </div>
+        <div>
+          <span>Not Started</span>
+        </div>
       </main>
     </>
   );

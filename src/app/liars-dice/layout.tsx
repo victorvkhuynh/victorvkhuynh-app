@@ -3,9 +3,8 @@ import "~/styles/globals.css";
 import { Inter } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
-import NavBar from "./_components/navbar";
-import Footer from "./_components/footer";
 import { ThemeProvider } from "next-themes";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,8 +12,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "VictorVKHuynh",
-  description: "Software Engineer",
+  title: "Liar's Dice",
+  description: "My multiplayer take on the popular deception game",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
@@ -25,12 +24,15 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head></head>
+      <head>
+        <Script
+          src="https://kit.fontawesome.com/c89775329e.js"
+          crossOrigin="anonymous"
+        ></Script>
+      </head>
       <body className={`font-sans ${inter.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <NavBar />
           <TRPCReactProvider>{children}</TRPCReactProvider>
-          <Footer />
         </ThemeProvider>
       </body>
     </html>
