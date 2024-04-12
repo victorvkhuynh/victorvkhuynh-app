@@ -5,7 +5,6 @@ import Button from "@mui/material/Button";
 import { useState } from "react";
 import Die from "../_components/liars-dice/die";
 import { ButtonGroup } from "@mui/material";
-import Quantity from "../_components/liars-dice/quantity";
 import Call from "../_components/liars-dice/call";
 
 export default function LiarsDice() {
@@ -24,6 +23,46 @@ export default function LiarsDice() {
     );
     console.log(newDice);
     setDice(newDice);
+  };
+
+  const updateTableValues = () => {
+    setTableQuantity(quantity);
+    setTableFace(face);
+  };
+
+  const decreaseBet = () => {
+    if (quantity > 0 && quantity > tableQuantity) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const increaseBet = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const disableCheck = (value: number) => {
+    if (value <= tableFace && quantity <= tableQuantity) {
+      return true;
+    }
+    return false;
+  };
+
+  const validRaise = () => {
+    if (
+      quantity > tableQuantity ||
+      (quantity === tableQuantity && face > tableFace)
+    ) {
+      return true;
+    }
+    return false;
+  };
+
+  const disabledButtonStyle = "disabled:bg-basic";
+  const selectedButtonStyle = (value: number) => {
+    if (value === face) {
+      return "bg-contrast";
+    }
+    return "";
   };
 
   return (
@@ -62,54 +101,59 @@ export default function LiarsDice() {
               className="justify-center "
               aria-label="Quantity Buttons"
             >
-              <Button
-                onClick={() => {
-                  setQuantity(quantity + 1);
-                }}
-              >
-                +1
-              </Button>
-              <Button
-                onClick={() => {
-                  if (quantity > 0 && quantity > tableQuantity) {
-                    setQuantity(quantity - 1);
-                  }
-                }}
-              >
-                -1
-              </Button>
+              <Button onClick={increaseBet}>+1</Button>
+              <Button onClick={decreaseBet}>-1</Button>
             </ButtonGroup>
             <ButtonGroup
-              className="grid grid-cols-3 justify-center"
+              className="grid grid-cols-3 justify-center "
               variant="outlined"
             >
-              <Button onClick={() => setFace(1)}>
+              <Button
+                className={`${disabledButtonStyle} ${selectedButtonStyle(1)}`}
+                onClick={() => setFace(1)}
+                disabled={disableCheck(1)}
+              >
                 <Die face={1} />
               </Button>
-              <Button onClick={() => setFace(2)}>
+              <Button
+                className={`${disabledButtonStyle} ${selectedButtonStyle(2)}`}
+                onClick={() => setFace(2)}
+                disabled={disableCheck(2)}
+              >
                 <Die face={2} />
               </Button>
-              <Button onClick={() => setFace(3)}>
+              <Button
+                className={`${disabledButtonStyle} ${selectedButtonStyle(3)}`}
+                onClick={() => setFace(3)}
+                disabled={disableCheck(3)}
+              >
                 <Die face={3} />
               </Button>
-              <Button onClick={() => setFace(4)}>
+              <Button
+                className={`${disabledButtonStyle} ${selectedButtonStyle(4)}`}
+                onClick={() => setFace(4)}
+                disabled={disableCheck(4)}
+              >
                 <Die face={4} />
               </Button>
-              <Button onClick={() => setFace(5)}>
+              <Button
+                className={`${disabledButtonStyle} ${selectedButtonStyle(5)}`}
+                onClick={() => setFace(5)}
+                disabled={disableCheck(5)}
+              >
                 <Die face={5} />
               </Button>
-              <Button onClick={() => setFace(6)}>
+              <Button
+                className={`${disabledButtonStyle} ${selectedButtonStyle(6)}`}
+                onClick={() => setFace(6)}
+                disabled={disableCheck(6)}
+              >
                 <Die face={6} />
               </Button>
             </ButtonGroup>
           </div>
           <ButtonGroup orientation="vertical">
-            <Button
-              onClick={() => {
-                setTableQuantity(quantity);
-                setTableFace(face);
-              }}
-            >
+            <Button onClick={updateTableValues} disabled={!validRaise()}>
               Raise to <Call quantity={quantity} face={face} />
             </Button>
             <Button>Liar!</Button>
