@@ -40,6 +40,16 @@ export default function Projects() {
         <div>
           <span>Not Started</span>
         </div>
+        {/* Project 3 */}
+        <div className="text-center">
+          <p className="">Neetcode</p>
+        </div>
+        <div className="col-span-2">
+          <p>This is for tracking progress on Neetcode problems</p>
+        </div>
+        <div>
+          <span>Not Started</span>
+        </div>
       </main>
     </>
   );
