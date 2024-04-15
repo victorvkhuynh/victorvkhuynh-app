@@ -27,13 +27,9 @@ export default function NavBar() {
         </Link>
       </div>
       <div className="col-span-4 text-center md:col-span-1 ">
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://medium.com/@victorvkhuynh"
-        >
+        <Link target="_blank" rel="noopener noreferrer" href="/">
           <button className="bg-transparent min-h-full min-w-full rounded border border-accent px-4 py-2 font-semibold text-basic hover:bg-contrast dark:border-light dark:text-light">
-            Blog
+            Contact
           </button>
         </Link>
       </div>

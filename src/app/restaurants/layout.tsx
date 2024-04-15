@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { ThemeProvider } from "next-themes";
+import RestoNavbar from "./resto-navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,21 +12,23 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Liar's Dice",
-  description: "My multiplayer take on the popular deception game",
+  title: "Example Restaurant Page 1",
+  description:
+    "Want a website like this? Send me an email at victorvkhuynh@gmail.com",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function LiarsDiceLayout({
+export default function RestoLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div className={`font-sans ${inter.variable}`}>
+    <section className={`font-sans ${inter.variable}`}>
       <ThemeProvider attribute="class" defaultTheme="dark">
+        <RestoNavbar />
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </ThemeProvider>
-    </div>
+    </section>
   );
 }

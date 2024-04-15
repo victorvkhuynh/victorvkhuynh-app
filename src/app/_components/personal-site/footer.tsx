@@ -14,6 +14,9 @@ import GitHubWhiteIcon from "src/assets/github-white.svg";
 import GitHubBlackIcon from "src/assets/github-black.svg";
 import LinkedInBlueIcon from "src/assets/linkedin-blue.png";
 import LinkedInWhiteIcon from "src/assets/linkedin-white.png";
+import MediumWhiteIcon from "src/assets/medium-white.png";
+import MediumBlackIcon from "src/assets/medium-black.png";
+
 import Switch from "@mui/material/Switch";
 
 export default function Footer() {
@@ -46,7 +49,7 @@ export default function Footer() {
                 <Image
                   src={theme === "dark" ? DiscordWhiteIcon : DiscordBlackIcon}
                   height={24}
-                  alt="Discord Link"
+                  alt="Discord Logo"
                 />
               </Link>
             </li>
@@ -61,7 +64,7 @@ export default function Footer() {
                     theme === "dark" ? InstagramWhiteIcon : InstagramBlackIcon
                   }
                   height={24}
-                  alt="Instagram Link"
+                  alt="Instagram Logo"
                 />
               </Link>
             </li>
@@ -74,7 +77,7 @@ export default function Footer() {
                 <Image
                   src={theme === "dark" ? GitHubWhiteIcon : GitHubBlackIcon}
                   height={24}
-                  alt="GitHub Link"
+                  alt="GitHub Logo"
                 />
               </Link>
             </li>
@@ -87,7 +90,20 @@ export default function Footer() {
                 <Image
                   src={theme === "dark" ? LinkedInWhiteIcon : LinkedInBlueIcon}
                   height={24}
-                  alt="LinkedIn Link"
+                  alt="LinkedIn Logo"
+                />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://medium.com/@victorvkhuynh"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={theme === "dark" ? MediumWhiteIcon : MediumBlackIcon}
+                  height={24}
+                  alt="Medium Logo"
                 />
               </Link>
             </li>

@@ -27,7 +27,7 @@ export default function Projects() {
         </div>
         <div>
           <Link className="text-contrast" href="/liars-dice">
-            Work in progress
+            <span>Work in progress</span>
           </Link>
         </div>
         {/* Project 2 */}
@@ -49,6 +49,18 @@ export default function Projects() {
         </div>
         <div>
           <span>Not Started</span>
+        </div>
+        {/* Project 4 */}
+        <div className="text-center">
+          <p className="">Restaurant Website</p>
+        </div>
+        <div className="col-span-2">
+          <p>Need a website? Send me an e-mail and we can have a chat!</p>
+        </div>
+        <div>
+          <Link href="/restaurants" className="text-contrast">
+            <span>Work in progress</span>
+          </Link>
         </div>
       </main>
     </>
