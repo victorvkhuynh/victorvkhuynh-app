@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { TRPCReactProvider } from "~/trpc/react";
 import { ThemeProvider } from "next-themes";
 import RestoNavbar from "./resto-navbar";
+import RestoFooter from "./resto-footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RestoLayout({
       <ThemeProvider attribute="class" defaultTheme="dark">
         <RestoNavbar />
         <TRPCReactProvider>{children}</TRPCReactProvider>
+        <RestoFooter />
       </ThemeProvider>
     </section>
   );

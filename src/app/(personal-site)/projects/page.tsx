@@ -58,7 +58,7 @@ export default function Projects() {
           <p>Need a website? Send me an e-mail and we can have a chat!</p>
         </div>
         <div>
-          <Link href="/restaurants" className="text-contrast">
+          <Link href="/restaurant-poc1" className="text-contrast">
             <span>Work in progress</span>
           </Link>
         </div>

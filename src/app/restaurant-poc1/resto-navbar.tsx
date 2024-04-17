@@ -18,19 +18,20 @@ export default function RestoNavbar() {
           </button>
         </Link>
       </div>
-      <div className="col-span-4 md:col-span-2">
-        <ul className="flex w-full justify-items-center gap-4">
-          <li>Hours</li>
-          <li>Location</li>
-          <li>Reservations</li>
-          <li>Catering</li>
-          <li>Our Story</li>
-          <li>Deals</li>
+      <div className="col-span-4 flex flex-col items-center md:col-span-2">
+        <br />
+        <ul className="flex gap-4 text-xl ">
+          <li className="hover:bg-contrast">Hours</li>
+          <li className="hover:bg-contrast">Location</li>
+          <li className="hover:bg-contrast">Reservations</li>
+          <li className="hover:bg-contrast">Catering</li>
+          <li className="hover:bg-contrast">Our Story</li>
+          <li className="hover:bg-contrast">Deals</li>
         </ul>
       </div>
       <div className="col-span-4 md:col-span-1">
         <Link href="/menu">
-          <button className="bg-transparent min-h-full min-w-full rounded border border-accent px-4 py-2 font-semibold text-basic hover:bg-contrast dark:border-light dark:text-light">
+          <button className="bg-transparent min-h-full min-w-full rounded-full border px-4 py-2 font-semibold text-basic ">
             Menu
           </button>
         </Link>
