@@ -5,14 +5,37 @@ import Image from "next/image";
 export default function RestaurantOne() {
   return (
     <>
-      <div className="mx-11 mt-4 grid border-spacing-2 grid-cols-4 gap-4 overflow-hidden">
-        <div className="col-span-1">1</div>
-        <div className="relative col-span-2 h-96 bg-contrast">
-          <Image src={CoffeeShop} alt="Coffee Shop" fill />
+      <div className="absolute left-0 top-0 -z-10 h-dvh w-full">
+        {/* <div className="relative z-0 col-span-4 h-dvh bg-contrast bg-cover opacity-40"> */}
+        <Image fill src={CoffeeShop} alt="Coffee Shop" />
+        {/* max-w-xs */}
+      </div>
+      {/* <div className="bg-black h-full w-full overflow-hidden bg-fixed opacity-50"> */}
+      <div className="z-10 mx-11 mt-4 grid border-spacing-2 grid-cols-4 gap-4 overflow-hidden">
+        <div className="col-span-1 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
+          <p className="text-light">Example card</p>
         </div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
+        <div className="col-span-2 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
+          <p className="text-light">
+            Welcome! This is where you would write about your company and any
+            feelings of emotion you want to convey to your customers.
+            <br />
+            <br />
+            We are proud to serve you and your family
+            <br />
+            <br />
+            We are hiring
+          </p>
+        </div>
+        <div className="col-span-1 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
+          <p className="text-light">Example card</p>
+        </div>
+        <div className="col-span-2 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
+          <p className="text-light">Example card</p>
+        </div>
+        <div className="col-span-2 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
+          <p className="text-light">Example card</p>
+        </div>
       </div>
     </>
   );
