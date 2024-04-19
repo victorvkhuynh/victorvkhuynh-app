@@ -34,10 +34,8 @@ export default function Footer() {
   return (
     <>
       <br />
-      <footer className="bottom-4 left-0 w-full md:absolute">
-        <div className="placeholder">
-          <br />
-        </div>
+      <footer className="absolute left-0 w-full p-2">
+        <div className="placeholder"></div>
         <div className="flex flex-col items-center">
           <ul className="flex gap-x-4">
             <li>

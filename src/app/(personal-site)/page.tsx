@@ -38,15 +38,14 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <div className="col-span-4 row-span-2 flex h-full items-center justify-center md:col-span-2">
-            <div className="relative h-full w-full overflow-hidden rounded-full drop-shadow-2xl">
-              <Image
-                placeholder="blur"
-                priority
-                src={PersonalPicture}
-                alt="Victor Huynh"
-              />
-            </div>
+          <div className="col-span-4 row-span-2 h-full  md:col-span-2">
+            <Image
+              placeholder="blur"
+              priority
+              className="aspect-square overflow-hidden rounded-full drop-shadow-xl"
+              src={PersonalPicture}
+              alt="Victor Huynh"
+            />
           </div>
           <div className="col-span-4 flex h-full items-center justify-center tracking-widest md:col-span-1">
             <div className="h-full w-full">

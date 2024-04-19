@@ -33,7 +33,6 @@ export default function NavBar() {
           </button>
         </Link>
       </div>
-      <br />
     </div>
   );
 }
