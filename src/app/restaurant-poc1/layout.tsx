@@ -6,6 +6,7 @@ import { TRPCReactProvider } from "~/trpc/react";
 import { ThemeProvider } from "next-themes";
 import RestoNavbar from "./resto-navbar";
 import RestoFooter from "./resto-footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,12 +26,16 @@ export default function RestoLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className={`font-sans ${inter.variable}`}>
-      <ThemeProvider attribute="class" defaultTheme="dark">
-        <RestoNavbar />
-        <TRPCReactProvider>{children}</TRPCReactProvider>
-        <RestoFooter />
-      </ThemeProvider>
-    </section>
+    <html suppressHydrationWarning lang="en">
+      <head></head>
+      <GoogleAnalytics gaId="G-9WGYCEQBFB" />
+      <body className={`font-sans ${inter.variable}`}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <RestoNavbar />
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+          <RestoFooter />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
