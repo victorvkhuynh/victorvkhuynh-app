@@ -11,6 +11,9 @@ export default {
       contrast: "#76ABAE",
       lightercontrast: "#BFDCDE",
       light: "#EEEEEE",
+      error: "#ef4444",
+      progress: "#eab308",
+      success: "#22c55e",
     },
     extend: {
       fontFamily: {

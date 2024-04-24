@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-undef */
 import CoffeeShop from "../../assets/coffee-shop.jpg";
 import Image from "next/image";
+import Latte from "../../assets/latte-art.jpg";
+import EspressoMachine from "../../assets/espresso-machine.jpg";
 
 export default function RestaurantOne() {
   return (
@@ -12,30 +14,42 @@ export default function RestaurantOne() {
       </div>
       {/* <div className="bg-black h-full w-full overflow-hidden bg-fixed opacity-50"> */}
       <div className="z-10 mx-11 mt-4 grid border-spacing-2 grid-cols-4 gap-4 overflow-hidden">
-        <div className="col-span-1 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
-          <p className="text-light">Example card</p>
+        <div className="col-span-4 rounded-md bg-[#A79277]">
+          <p className=" text-center text-lg font-semibold text-[#FFF2E1]">
+            Handcrafted. Local. Ethical. Delicious.
+          </p>
         </div>
-        <div className="col-span-2 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
-          <p className="text-light">
+        <div className="col-span-1 h-96 w-full overflow-hidden rounded-md bg-[#A79277] bg-fixed">
+          <Image className="object-contain" src={Latte} alt="Latte"></Image>
+        </div>
+        <div className="col-span-1 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
+          <p className="p-4 text-center text-xl text-light">
+            <br />
             Welcome! This is where you would write about your company and any
             feelings of emotion you want to convey to your customers.
             <br />
             <br />
-            We are proud to serve you and your family
+            We are proud to serve our wonderful neighbourhood with the freshest
+            coffee in town.
             <br />
-            <br />
-            We are hiring
           </p>
         </div>
-        <div className="col-span-1 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
-          <p className="text-light">Example card</p>
+        <div className="col-span-2 h-96 w-full overflow-hidden rounded-md bg-accent bg-fixed">
+          <div className="text-light">
+            <Image
+              className="object-contain"
+              src={EspressoMachine}
+              alt="Espresso Machine"
+            ></Image>
+          </div>
         </div>
-        <div className="col-span-2 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
-          <p className="text-light">Example card</p>
-        </div>
-        <div className="col-span-2 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
-          <p className="text-light">Example card</p>
-        </div>
+        <div></div>
+        {/* <div className=" col-span-1 h-96 w-full rounded-md bg-accent">
+          <div className="text-light "></div>
+        </div> */}
+        {/* <div className="col-span-2 h-96 w-full overflow-hidden rounded-md bg-light bg-fixed opacity-80">
+          <p className="text-basic">Example card</p>
+        </div> */}
       </div>
     </>
   );

@@ -24,7 +24,7 @@ export default function RestoFooter() {
       <br />
       <div className="absolute bottom-0 left-0 w-full">
         <hr />
-        <footer className="bg-lightercontrast bottom-0 left-0 grid grid-cols-4 p-2">
+        <footer className="bottom-0 left-0 grid grid-cols-4 bg-[#A79277] p-2">
           <div className="col-span-1">
             <Image
               src={VHLogo}
@@ -59,7 +59,7 @@ export default function RestoFooter() {
             </ul>
           </div>
           <div className="col-span-1 flex h-max flex-col items-end object-center pr-4 text-sm">
-            &copy; VVKH - All Rights Reserved
+            <span>&copy; VVKH - All Rights Reserved</span>
           </div>
         </footer>
       </div>

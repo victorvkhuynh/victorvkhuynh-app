@@ -26,8 +26,8 @@ export default function Projects() {
           <p className="">My multiplayer take on the popular deception game</p>
         </div>
         <div>
-          <Link className="text-contrast" href="/liars-dice">
-            <span>Work in progress</span>
+          <Link className="text-progress" href="/liars-dice">
+            <span>In Progress</span>
           </Link>
         </div>
         {/* Project 2 */}
@@ -38,7 +38,7 @@ export default function Projects() {
           <p>My multiplayer take on a DDR game, inspired by MapleStory</p>
         </div>
         <div>
-          <span>Not Started</span>
+          <span className="text-error">Not Started</span>
         </div>
         {/* Project 3 */}
         <div className="text-center">
@@ -48,7 +48,7 @@ export default function Projects() {
           <p>This is for tracking progress on Neetcode problems</p>
         </div>
         <div>
-          <span>Not Started</span>
+          <span className="text-error">Not Started</span>
         </div>
         {/* Project 4 */}
         <div className="text-center">
@@ -58,8 +58,8 @@ export default function Projects() {
           <p>Need a website? Send me an e-mail and we can have a chat!</p>
         </div>
         <div>
-          <Link href="/restaurant-poc1" className="text-contrast">
-            <span>Work in progress</span>
+          <Link href="/restaurant-poc1" className="text-progress">
+            <span>In Progress</span>
           </Link>
         </div>
       </main>
