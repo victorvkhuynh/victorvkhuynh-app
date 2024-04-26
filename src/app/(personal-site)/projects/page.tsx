@@ -1,68 +1,70 @@
 import Link from "next/link";
+import {
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@mui/material";
 
 export default function Projects() {
   return (
     <>
-      <main className="grid border-spacing-2 gap-4 md:grid-cols-4">
-        {/* Grid Headers */}
-        <div className="text-center">
-          <p className="font-semibold underline underline-offset-4">Projects</p>
-        </div>
-        <div className="col-span-2">
-          <p className="font-semibold underline underline-offset-4">
-            Description
-          </p>
-        </div>
-        <div>
-          <p className="font-semibold underline underline-offset-4">
-            Application Link
-          </p>
-        </div>
-        {/* Project 1 */}
-        <div className="text-center">
-          <p className="">Liar&apos;s Dice</p>
-        </div>
-        <div className="col-span-2">
-          <p className="">My multiplayer take on the popular deception game</p>
-        </div>
-        <div>
-          <Link className="text-progress" href="/liars-dice">
-            <span>In Progress</span>
-          </Link>
-        </div>
-        {/* Project 2 */}
-        <div className="text-center">
-          <p className="">Flatflat</p>
-        </div>
-        <div className="col-span-2">
-          <p>My multiplayer take on a DDR game, inspired by MapleStory</p>
-        </div>
-        <div>
-          <span className="text-error">Not Started</span>
-        </div>
-        {/* Project 3 */}
-        <div className="text-center">
-          <p className="">Neetcode</p>
-        </div>
-        <div className="col-span-2">
-          <p>This is for tracking progress on Neetcode problems</p>
-        </div>
-        <div>
-          <span className="text-error">Not Started</span>
-        </div>
-        {/* Project 4 */}
-        <div className="text-center">
-          <p className="">Restaurant Website</p>
-        </div>
-        <div className="col-span-2">
-          <p>Need a website? Send me an e-mail and we can have a chat!</p>
-        </div>
-        <div>
-          <Link href="/restaurant-poc1" className="text-progress">
-            <span>In Progress</span>
-          </Link>
-        </div>
-      </main>
+      <TableContainer className="m-auto my-2 flex w-full md:w-3/4">
+        <Table>
+          <TableHead>
+            <TableRow className="*:bg-primarylighter *:text-xl *:dark:bg-primarydark *:dark:text-primarylighter">
+              <TableCell>Projects</TableCell>
+              <TableCell>Description</TableCell>
+              <TableCell>Link</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow className="*:text-lg *:dark:bg-secondarydark *:dark:text-primarylighter">
+              <TableCell>Liar&apos;s Dice</TableCell>
+              <TableCell>
+                My multiplayer take on the popular deception game
+              </TableCell>
+              <TableCell>
+                <Link className="text-progress" href="/liars-dice">
+                  In Progress
+                </Link>
+              </TableCell>
+            </TableRow>
+            <TableRow className="*:text-lg *:dark:bg-secondarydark *:dark:text-primarylighter">
+              <TableCell>Flatflat</TableCell>
+              <TableCell>
+                My multiplayer take on a DDR game, inspired by MapleStory
+              </TableCell>
+              <TableCell>
+                <span className="text-error"> Not Started</span>
+              </TableCell>
+            </TableRow>
+            <TableRow className="*:text-lg *:dark:bg-secondarydark *:dark:text-primarylighter">
+              <TableCell>Neetcode</TableCell>
+              <TableCell>
+                This is for tracking progress on Neetcode problems
+              </TableCell>
+              <TableCell>
+                <span className="text-error">Not Started</span>
+              </TableCell>
+            </TableRow>
+            <TableRow className="*:text-lg *:dark:bg-secondarydark *:dark:text-primarylighter">
+              <TableCell>Restaurant Website</TableCell>
+              <TableCell>
+                Need a website? Send me an e-mail and we can have a chat!
+              </TableCell>
+              <TableCell>
+                <Link href="/restaurant-poc1" className="text-progress">
+                  In Progress
+                </Link>
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
     </>
   );
 }

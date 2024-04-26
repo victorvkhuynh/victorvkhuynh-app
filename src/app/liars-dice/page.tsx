@@ -57,10 +57,10 @@ export default function LiarsDice() {
     return false;
   };
 
-  const disabledButtonStyle = "disabled:bg-basic";
+  const disabledButtonStyle = "disabled:bg-primarydark";
   const selectedButtonStyle = (value: number) => {
     if (value === face) {
-      return "bg-contrast";
+      return "bg-accent";
     }
     return "";
   };
@@ -71,19 +71,19 @@ export default function LiarsDice() {
         Liar&apos;s Dice
       </header>
       <div className="grid gap-2 text-center md:grid-cols-4">
-        <div className="bg-contrast">Left Card</div>
+        <div className="bg-accent">Left Card</div>
         {/* middle card is going to be an interface with shared state */}
-        <div className="col-span-2 h-64 bg-light">
+        <div className="bg-primarylight col-span-2 h-64">
           <span>Middle Card</span>
           <div className="flex justify-center">
             Last Call was:
             <Call quantity={tableQuantity} face={tableFace} />
           </div>
         </div>
-        <div className="bg-contrast">Right Card</div>
-        <div className="bg-contrast">Left Placeholder</div>
+        <div className="bg-accent">Right Card</div>
+        <div className="bg-accent">Left Placeholder</div>
 
-        <div className="col-span-2 h-64 bg-light">
+        <div className="bg-primarylight col-span-2 h-64">
           <div>Your Hand:</div>
           <div className="flex flex-row justify-center gap-1" key="userHand">
             <Die face={dice[0]} />
@@ -159,7 +159,7 @@ export default function LiarsDice() {
             <Button>Liar!</Button>
           </ButtonGroup>
         </div>
-        <div className="bg-contrast">Right Placeholder</div>
+        <div className="bg-accent">Right Placeholder</div>
       </div>
     </>
   );

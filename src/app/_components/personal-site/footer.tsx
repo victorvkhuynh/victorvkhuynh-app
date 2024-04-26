@@ -34,7 +34,7 @@ export default function Footer() {
   return (
     <>
       <br />
-      <footer className="absolute bottom-0 left-0 w-full py-3">
+      <footer className="bg-primarylighter dark:bg-primarydark sticky bottom-0 left-0 w-full py-3 md:absolute">
         <div className="placeholder"></div>
         <div className="flex flex-col items-center">
           <ul className="flex gap-x-4">

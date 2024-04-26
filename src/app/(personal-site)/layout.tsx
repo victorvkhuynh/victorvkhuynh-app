@@ -28,14 +28,12 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head></head>
       <GoogleAnalytics gaId="G-9WGYCEQBFB" />
-      <body className={`font-sans ${inter.variable}`}>
-        <section>
-          <ThemeProvider attribute="class" defaultTheme="dark">
-            <NavBar />
-            <TRPCReactProvider>{children}</TRPCReactProvider>
-            <Footer />
-          </ThemeProvider>
-        </section>
+      <body className={`font-sans ${inter.variable} max-h-full`}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <NavBar />
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
