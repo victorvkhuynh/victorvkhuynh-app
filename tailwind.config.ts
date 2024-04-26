@@ -6,11 +6,12 @@ export default {
   content: ["./src/**/*.tsx"],
   theme: {
     colors: {
-      basic: "#222831",
-      accent: "#31363F",
-      contrast: "#76ABAE",
-      lightercontrast: "#BFDCDE",
-      light: "#EEEEEE",
+      primarydark: "#051923",
+      secondarydark: "#003554",
+      accent: "#006494",
+      secondarylight: "#0582CA",
+      primarylight: "#00A6FB",
+      primarylighter: "#caf0f8",
       error: "#ef4444",
       progress: "#eab308",
       success: "#22c55e",

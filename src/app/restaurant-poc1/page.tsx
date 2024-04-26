@@ -8,7 +8,7 @@ export default function RestaurantOne() {
   return (
     <>
       <div className="absolute left-0 top-0 -z-10 h-dvh w-full">
-        {/* <div className="relative z-0 col-span-4 h-dvh bg-contrast bg-cover opacity-40"> */}
+        {/* <div className="relative z-0 col-span-4 h-dvh bg-accent bg-cover opacity-40"> */}
         <Image fill src={CoffeeShop} alt="Coffee Shop" />
         {/* max-w-xs */}
       </div>
@@ -22,8 +22,8 @@ export default function RestaurantOne() {
         <div className="col-span-1 h-96 w-full overflow-hidden rounded-md bg-[#A79277] bg-fixed">
           <Image className="object-contain" src={Latte} alt="Latte"></Image>
         </div>
-        <div className="col-span-1 h-96 w-full overflow-hidden bg-accent bg-fixed opacity-80">
-          <p className="p-4 text-center text-xl text-light">
+        <div className="col-span-1 h-96 w-full overflow-hidden bg-primarydark bg-fixed opacity-80">
+          <p className="p-4 text-center text-xl text-primarylighter">
             <br />
             Welcome! This is where you would write about your company and any
             feelings of emotion you want to convey to your customers.
@@ -34,8 +34,8 @@ export default function RestaurantOne() {
             <br />
           </p>
         </div>
-        <div className="col-span-2 h-96 w-full overflow-hidden rounded-md bg-accent bg-fixed">
-          <div className="text-light">
+        <div className="col-span-2 h-96 w-full overflow-hidden rounded-md bg-secondarydark bg-fixed">
+          <div>
             <Image
               className="object-contain"
               src={EspressoMachine}
@@ -44,11 +44,11 @@ export default function RestaurantOne() {
           </div>
         </div>
         <div></div>
-        {/* <div className=" col-span-1 h-96 w-full rounded-md bg-accent">
-          <div className="text-light "></div>
+        {/* <div className=" col-span-1 h-96 w-full rounded-md bg-secondarydark">
+          <div className="text-primarylight "></div>
         </div> */}
-        {/* <div className="col-span-2 h-96 w-full overflow-hidden rounded-md bg-light bg-fixed opacity-80">
-          <p className="text-basic">Example card</p>
+        {/* <div className="col-span-2 h-96 w-full overflow-hidden rounded-md bg-primarylight bg-fixed opacity-80">
+          <p className="text-primarydark">Example card</p>
         </div> */}
       </div>
     </>

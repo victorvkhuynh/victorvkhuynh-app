@@ -12,7 +12,7 @@ export default function Hours() {
   return (
     <>
       {/* TODO: make it dynamic so it takes current time and highlights the day / shows time till next open */}
-      <div className="w-full items-center justify-center text-light">
+      <div className="text-primarylight w-full items-center justify-center">
         <div className="text-center text-4xl font-bold">Hours</div>
         <TableContainer className="m-auto my-2 flex w-1/2" component={Paper}>
           <Table>

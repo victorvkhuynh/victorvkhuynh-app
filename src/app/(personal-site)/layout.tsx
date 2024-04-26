@@ -6,6 +6,7 @@ import { TRPCReactProvider } from "~/trpc/react";
 import NavBar from "../_components/personal-site/navbar";
 import Footer from "../_components/personal-site/footer";
 import { ThemeProvider } from "next-themes";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,12 +25,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className={`font-sans ${inter.variable}`}>
-      <ThemeProvider attribute="class" defaultTheme="dark">
-        <NavBar />
-        <TRPCReactProvider>{children}</TRPCReactProvider>
-        <Footer />
-      </ThemeProvider>
-    </section>
+    <html suppressHydrationWarning lang="en">
+      <head></head>
+      <GoogleAnalytics gaId="G-9WGYCEQBFB" />
+      <body className={`font-sans ${inter.variable} max-h-full`}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <NavBar />
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
