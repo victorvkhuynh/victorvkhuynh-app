@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Example Restaurant Page 1",
+  title: "Example Coffee Restaurant",
   description:
     "Want a website like this? Send me an email at victorvkhuynh@gmail.com",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
@@ -29,8 +29,8 @@ export default function RestoLayout({
     <html suppressHydrationWarning lang="en">
       <head></head>
       <GoogleAnalytics gaId="G-9WGYCEQBFB" />
-      <body className={`font-sans ${inter.variable}`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+      <body className={`font-sans ${inter.variable} bg-[#ecddc9] `}>
+        <ThemeProvider attribute="class" defaultTheme="light">
           <RestoNavbar />
           <TRPCReactProvider>{children}</TRPCReactProvider>
           <RestoFooter />
