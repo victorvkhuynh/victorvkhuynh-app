@@ -5,23 +5,14 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "next-themes";
-import DiscordWhiteIcon from "src/assets/discord-white.svg";
 import DiscordBlackIcon from "src/assets/discord-black.svg";
 import InstagramBlackIcon from "src/assets/instagram-black.svg";
-import InstagramWhiteIcon from "src/assets/instagram-white.svg";
-import GitHubWhiteIcon from "src/assets/github-white.svg";
 import GitHubBlackIcon from "src/assets/github-black.svg";
 import LinkedInBlueIcon from "src/assets/linkedin-blue.png";
-import LinkedInWhiteIcon from "src/assets/linkedin-white.png";
-import MediumWhiteIcon from "src/assets/medium-white.png";
 import MediumBlackIcon from "src/assets/medium-black.png";
-
-import Switch from "@mui/material/Switch";
 
 export default function Footer() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -34,7 +25,7 @@ export default function Footer() {
   return (
     <>
       <br />
-      <footer className="bg-primarylighter dark:bg-primarydark sticky bottom-0 left-0 w-full py-3 md:absolute">
+      <footer className="sticky bottom-0 left-0 w-full bg-primarylighter py-3 md:absolute">
         <div className="placeholder"></div>
         <div className="flex flex-col items-center">
           <ul className="flex gap-x-4">
@@ -44,11 +35,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src={theme === "dark" ? DiscordWhiteIcon : DiscordBlackIcon}
-                  height={24}
-                  alt="Discord Logo"
-                />
+                <Image src={DiscordBlackIcon} height={24} alt="Discord Logo" />
               </Link>
             </li>
             <li>
@@ -58,9 +45,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <Image
-                  src={
-                    theme === "dark" ? InstagramWhiteIcon : InstagramBlackIcon
-                  }
+                  src={InstagramBlackIcon}
                   height={24}
                   alt="Instagram Logo"
                 />
@@ -72,11 +57,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src={theme === "dark" ? GitHubWhiteIcon : GitHubBlackIcon}
-                  height={24}
-                  alt="GitHub Logo"
-                />
+                <Image src={GitHubBlackIcon} height={24} alt="GitHub Logo" />
               </Link>
             </li>
             <li>
@@ -85,11 +66,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src={theme === "dark" ? LinkedInWhiteIcon : LinkedInBlueIcon}
-                  height={24}
-                  alt="LinkedIn Logo"
-                />
+                <Image src={LinkedInBlueIcon} height={24} alt="LinkedIn Logo" />
               </Link>
             </li>
             <li>
@@ -98,19 +75,8 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src={theme === "dark" ? MediumWhiteIcon : MediumBlackIcon}
-                  height={24}
-                  alt="Medium Logo"
-                />
+                <Image src={MediumBlackIcon} height={24} alt="Medium Logo" />
               </Link>
-            </li>
-            <li>
-              <Switch
-                size="small"
-                defaultChecked={theme === "dark"}
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              />
             </li>
           </ul>
         </div>

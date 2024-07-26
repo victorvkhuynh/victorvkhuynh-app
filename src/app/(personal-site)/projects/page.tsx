@@ -15,14 +15,14 @@ export default function Projects() {
       <TableContainer className="m-auto my-2 flex w-full md:w-3/4">
         <Table>
           <TableHead>
-            <TableRow className="*:bg-primarylighter *:text-xl *:dark:bg-primarydark *:dark:text-primarylighter">
+            <TableRow className="*:bg-primarylighter *:text-xl">
               <TableCell>Projects</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Link</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            <TableRow className="*:text-lg *:dark:bg-secondarydark *:dark:text-primarylighter">
+            <TableRow className="*:text-lg ">
               <TableCell>Liar&apos;s Dice</TableCell>
               <TableCell>
                 My multiplayer take on the popular deception game
@@ -33,7 +33,7 @@ export default function Projects() {
                 </Link>
               </TableCell>
             </TableRow>
-            <TableRow className="*:text-lg *:dark:bg-secondarydark *:dark:text-primarylighter">
+            <TableRow className="*:text-lg">
               <TableCell>Flatflat</TableCell>
               <TableCell>
                 My multiplayer take on a DDR game, inspired by MapleStory
@@ -42,16 +42,16 @@ export default function Projects() {
                 <span className="text-error"> Not Started</span>
               </TableCell>
             </TableRow>
-            <TableRow className="*:text-lg *:dark:bg-secondarydark *:dark:text-primarylighter">
+            <TableRow className="*:text-lg">
               <TableCell>Neetcode</TableCell>
               <TableCell>
                 This is for tracking progress on Neetcode problems
               </TableCell>
               <TableCell>
-                <span className="text-error">Not Started</span>
+                <span className="text-error">2/150</span>
               </TableCell>
             </TableRow>
-            <TableRow className="*:text-lg *:dark:bg-secondarydark *:dark:text-primarylighter">
+            <TableRow className="*:text-lg">
               <TableCell>Restaurant Website</TableCell>
               <TableCell>
                 Need a website? Send me an e-mail and we can have a chat!

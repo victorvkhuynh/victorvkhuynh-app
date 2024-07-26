@@ -5,7 +5,6 @@ import { Inter } from "next/font/google";
 import { TRPCReactProvider } from "~/trpc/react";
 import NavBar from "../_components/personal-site/navbar";
 import Footer from "../_components/personal-site/footer";
-import { ThemeProvider } from "next-themes";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
@@ -29,11 +28,9 @@ export default function RootLayout({
       <head></head>
       <GoogleAnalytics gaId="G-9WGYCEQBFB" />
       <body className={`font-sans ${inter.variable} max-h-full`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          <NavBar />
-          <TRPCReactProvider>{children}</TRPCReactProvider>
-          <Footer />
-        </ThemeProvider>
+        <NavBar />
+        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <Footer />
       </body>
     </html>
   );

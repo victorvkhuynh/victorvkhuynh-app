@@ -22,7 +22,7 @@ export default function RestaurantOne() {
         <div className="col-span-1 h-96 w-full overflow-hidden rounded-md bg-[#A79277] bg-fixed">
           <Image className="object-contain" src={Latte} alt="Latte"></Image>
         </div>
-        <div className="col-span-1 h-96 w-full overflow-hidden bg-primarydark bg-fixed opacity-80">
+        <div className="col-span-1 h-96 w-full overflow-hidden bg-[#160f06] bg-fixed opacity-80">
           <p className="p-4 text-center text-xl text-primarylighter">
             <br />
             Welcome! This is where you would write about your company and any

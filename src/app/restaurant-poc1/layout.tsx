@@ -3,7 +3,6 @@ import "~/styles/globals.css";
 import { Inter } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
-import { ThemeProvider } from "next-themes";
 import RestoNavbar from "./resto-navbar";
 import RestoFooter from "./resto-footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -30,11 +29,9 @@ export default function RestoLayout({
       <head></head>
       <GoogleAnalytics gaId="G-9WGYCEQBFB" />
       <body className={`font-sans ${inter.variable} bg-[#ecddc9] `}>
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <RestoNavbar />
-          <TRPCReactProvider>{children}</TRPCReactProvider>
-          <RestoFooter />
-        </ThemeProvider>
+        <RestoNavbar />
+        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <RestoFooter />
       </body>
     </html>
   );
