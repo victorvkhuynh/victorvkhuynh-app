@@ -43,7 +43,7 @@ There are numerous ways to play, and I aim to introduce and accommodate each var
 
 **Would be nice**
 
-- [ ] Matchmaking
+- [ ] **Matchmaking**
   - [ ] Ranking system
   - [ ] Skill-based matchmaking
 - [ ] Voice chat
@@ -53,6 +53,7 @@ There are numerous ways to play, and I aim to introduce and accommodate each var
 
 **UI/UX Overhaul** - this becomes a priority after the base gameplay is completed
 
+- [ ] **Mobile support**
 - [ ] Create the panels for interaction
 - [ ] Update appropriate images for the dice/buttons
 - [ ] Add animations for interactivity
