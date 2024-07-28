@@ -60,7 +60,7 @@ export default function LiarsDice() {
   const disabledButtonStyle = "disabled:bg-primarydark";
   const selectedButtonStyle = (value: number) => {
     if (value === face) {
-      return "bg-accent";
+      return "bg-diceMediumDark";
     }
     return "";
   };
@@ -71,19 +71,19 @@ export default function LiarsDice() {
         Liar&apos;s Dice
       </header>
       <div className="grid gap-2 text-center md:grid-cols-4">
-        <div className="bg-accent">Left Card</div>
+        <div className="bg-diceLight">Left Card</div>
         {/* middle card is going to be an interface with shared state */}
-        <div className="bg-primarylight col-span-2 h-64">
+        <div className="bg-diceLight col-span-2 h-64">
           <span>Middle Card</span>
           <div className="flex justify-center">
             Last Call was:
             <Call quantity={tableQuantity} face={tableFace} />
           </div>
         </div>
-        <div className="bg-accent">Right Card</div>
-        <div className="bg-accent">Left Placeholder</div>
+        <div className="bg-diceLight">Right Card</div>
+        <div className="bg-diceLight">Left Placeholder</div>
 
-        <div className="bg-primarylight col-span-2 h-64">
+        <div className="bg-diceLight col-span-2 h-64">
           <div>Your Hand:</div>
           <div className="flex flex-row justify-center gap-1" key="userHand">
             <Die face={dice[0]} />
@@ -159,7 +159,7 @@ export default function LiarsDice() {
             <Button>Liar!</Button>
           </ButtonGroup>
         </div>
-        <div className="bg-accent">Right Placeholder</div>
+        <div className="bg-diceLight">Right Placeholder</div>
       </div>
     </>
   );

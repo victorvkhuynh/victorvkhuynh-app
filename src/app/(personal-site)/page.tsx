@@ -69,12 +69,15 @@ export default function HomePage() {
             </span>
             <br />
             <ul className="text-center text-lg tracking-wider">
-              <li>Finish my personal website</li>
+              <li>
+                <s>Finish my personal website</s> (2024/04/18)
+              </li>
               <li>Grow my blog, weekly posts</li>
               <li>Publish my first multiplayer game</li>
-              <li>Run a full marathon</li>
+              <li>
+                <s>Run a full marathon</s> (2024/05/05)
+              </li>
               <li>Dunk a basketball</li>
-              <li>Read a book a month</li>
             </ul>
           </div>
         </div>

@@ -15,6 +15,10 @@ export default {
       error: "#ef4444",
       progress: "#eab308",
       success: "#22c55e",
+      diceLight: "#FFF2D8",
+      diceMedium: "#EAD7BB",
+      diceMediumDark: "#BCA37F",
+      diceDark: "#113946",
     },
     extend: {
       fontFamily: {

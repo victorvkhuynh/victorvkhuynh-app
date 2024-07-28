@@ -48,7 +48,9 @@ export default function Projects() {
                 This is for tracking progress on Neetcode problems
               </TableCell>
               <TableCell>
-                <span className="text-error">2/150</span>
+                <Link href="neetcode" className="text-progress">
+                  7/150
+                </Link>
               </TableCell>
             </TableRow>
             <TableRow className="*:text-lg">
