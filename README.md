@@ -1,28 +1,59 @@
-# Create T3 App
+# victorvkhuynh-app
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+---
 
-## What's next? How do I make an app with this?
+This is my main mono-repo for my personal project
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+This includes my personal website, and links to actual working projects and progressions.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+The main thing that I'm currently working on is my **Liar's Dice** application:
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+---
 
-## Learn More
+## Liar's Dice is a classic bluffing game that is popular during karaoke sessions in Asian culture, as well as a drinking game
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+I have found this game particularly engaging because it does not rely solely on luck. It tests the trust between players, offering opportunities for enjoyable and memorable interactions, as well as strategic targeting.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+### In addition to the classic ruleset, you can modify the game with house rules, making it highly adaptable
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+There are numerous ways to play, and I aim to introduce and accommodate each variation. The game differs across cultures and households, showcasing its flexibility and universal appeal.
 
-## How do I deploy this?
+## Liar's Dice TODO:
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+---
+
+**Gameplay**
+
+- [x] Ensure base gameplay works with 1 player
+- [ ] Add multiplayer capability (section below)
+  - [ ] Write logic for changing turns
+  - [ ] Write logic for multiplayer win conditions
+- [ ] Thoroughly test gameplay logic with multiple players
+- [ ] If required, optimize gameplay/lag
+- [ ] Deploy to prod
+
+**Multiplayer Capability**
+
+- [ ] Multiple players in the same game instance
+- [ ] Time limit per turn (anti-stalling)
+- [ ] Ability to create lobbies
+  - [ ] Selectable game setting presets
+  - [ ] Customizable game settings
+- [ ] Game chat
+
+**Would be nice**
+
+- [ ] Matchmaking
+  - [ ] Ranking system
+  - [ ] Skill-based matchmaking
+- [ ] Voice chat
+- [ ] Match history
+- [ ] Feedback/polling system
+- [ ] Player profiles
+
+**UI/UX Overhaul** - this becomes a priority after the base gameplay is completed
+
+- [ ] Create the panels for interaction
+- [ ] Update appropriate images for the dice/buttons
+- [ ] Add animations for interactivity
+- [ ] Redesign the user interface
