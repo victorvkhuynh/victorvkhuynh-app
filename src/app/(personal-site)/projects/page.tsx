@@ -64,6 +64,17 @@ export default function Projects() {
                 </Link>
               </TableCell>
             </TableRow>
+            <TableRow className="*:text-lg">
+              <TableCell>VVKH Bot</TableCell>
+              <TableCell>
+                Discord/Strava bot to calculate monthly Strava gains
+              </TableCell>
+              <TableCell>
+                <Link href="/vvkh-bot" className="text-progress">
+                  In Progress
+                </Link>
+              </TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </TableContainer>
