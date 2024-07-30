@@ -76,6 +76,35 @@ export default function NeetCode() {
               solution
             </TableCell>
           </TableRow>
+          <TableRow>
+            <TableCell>Valid Sudoku</TableCell>
+            <TableCell>2024/07/30</TableCell>
+            <TableCell>
+              Meh, I struggled to figure out how to set up the hashmap keys for
+              the square... I was on the right track with dividing it into three
+              sections with row and column but couldn&apos;t piece it together
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Longest Consecutive Sequence</TableCell>
+            <TableCell>2024/07/30</TableCell>
+            <TableCell>
+              Meh, I had the right idea but I wasn&apos;t able to guarantee that
+              it runs in linear time (felt like it was O(n^2)) with my solution,
+              the elegance of the provided solution was much better with
+              checking if it was the lowest value first and then checking to the
+              right of it. Good problem
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Validate Parentheses</TableCell>
+            <TableCell>2024/07/30</TableCell>
+            <TableCell>
+              Decent, I had the solution but I liked the provided solution
+              better using the map -- I used the manual method with the stack
+              and checking the opposite lol
+            </TableCell>
+          </TableRow>
         </TableBody>
       </Table>
     </>
