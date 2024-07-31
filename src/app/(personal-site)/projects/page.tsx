@@ -64,6 +64,18 @@ export default function Projects() {
                 </Link>
               </TableCell>
             </TableRow>
+            <TableRow className="*:text-lg">
+              <TableCell>Gamer Philosophy</TableCell>
+              <TableCell>
+                I believe that you can learn a lot about life through gaming
+                lens, and I will show you how I view things
+              </TableCell>
+              <TableCell>
+                <Link href="/philosophy" className="text-success">
+                  Complete
+                </Link>
+              </TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </TableContainer>
